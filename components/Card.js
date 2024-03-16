@@ -6,11 +6,12 @@ import {
   Text,
   StatusBar,
 } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const getItem = (_data, index) => ({
   id: Math.random().toString(12).substring(0),
-  title: `Item ${index + 1}`,
-  description: "Test",
+  title: `Title ${index + 1}`,
+  description: "Description",
   value: 105,
   createdDate: new Date().toLocaleDateString("tr"),
 });
@@ -25,7 +26,8 @@ const Item = ({ title, description, value, createdDate }) => (
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
       </View>
-      <View style={styles.contentItem}>
+      <View style={styles.contentItemWithValue}>
+        <MaterialCommunityIcons name="water" size={30} color={"#8b0000"} />
         <Text style={styles.value}>{value}</Text>
       </View>
     </View>
@@ -74,6 +76,14 @@ const styles = StyleSheet.create({
   contentItem: {
     display: 'flex',
     alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    padding: 8,
+    margin: 4,
+  },
+  contentItemWithValue: {
+    display: 'flex',
+    flexDirection: "row",
+    alignItems: 'center',
     justifyContent: 'space-between',
     padding: 8,
     margin: 4,

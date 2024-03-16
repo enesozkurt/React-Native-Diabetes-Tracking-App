@@ -24,7 +24,7 @@ const Filter = () => {
               { label: 'Bugün', value: 'today' },
               { label: 'Bu Hafta', value: 'weekly' },
               { label: 'Bu Ay', value: 'monthly' },
-              { label: 'Son 3 Ay', value: '3months' },
+              { label: 'Son 3 Ay', value: 'last3Months' },
             ]}
             style={{
               inputIOS: styles.pickerInput,
